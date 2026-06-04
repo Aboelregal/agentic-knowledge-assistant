@@ -1,7 +1,9 @@
 # 🧠 Agentic Knowledge Assistant
 
-> A production-style RAG application with AI Agents  
+> Built by **Ahmed AboElregal** — AI Engineer
 
+[![Author](https://img.shields.io/badge/Author-Ahmed%20AboElregal-6C63FF?style=flat)](https://github.com/AhmedAboElregal)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python)](https://python.org)
 [![LangChain](https://img.shields.io/badge/LangChain-0.3-green?logo=langchain)](https://langchain.com)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115-009688?logo=fastapi)](https://fastapi.tiangolo.com)
@@ -310,6 +312,17 @@ This project is designed to showcase the following AI Engineer skills on your CV
 
 ---
 
+## 👨‍💻 Author
+
+**Ahmed AboElregal**  
+AI Engineer
+
+[![GitHub](https://img.shields.io/badge/GitHub-AhmedAboElregal-181717?logo=github)](https://github.com/AhmedAboElregal)
+
+---
+
 ## 📄 License
 
-MIT License — free to use in your portfolio.
+MIT License — Copyright (c) 2025 Ahmed AboElregal
+
+See the [LICENSE](LICENSE) file for full details.
