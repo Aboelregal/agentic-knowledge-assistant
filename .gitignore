@@ -4,9 +4,8 @@ __pycache__/
 *.pyo
 .Python
 venv/
-.env/
+env/
 .env
-.venv/
 
 # ChromaDB (large binary files — regenerate locally)
 chroma_db/chroma.sqlite3
