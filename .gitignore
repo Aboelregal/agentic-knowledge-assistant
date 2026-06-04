@@ -5,6 +5,8 @@ __pycache__/
 .Python
 venv/
 env/
+.venv/
+.env/
 .env
 
 # ChromaDB (large binary files — regenerate locally)
