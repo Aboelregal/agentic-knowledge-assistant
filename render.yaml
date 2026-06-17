@@ -2,40 +2,32 @@ services:
   # ── FastAPI Backend ──────────────────────────────────────────────────────
   - type: web
     name: rag-api
-    runtime: python
-    region: oregon
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    region: frankfurt
     plan: free
-    rootDir: .
-    buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /health
     envVars:
       - key: GROQ_API_KEY
-        sync: false                          # you paste this in Render dashboard
+        sync: false
       - key: GROQ_MODEL
         value: llama3-8b-8192
       - key: CHROMA_DB_PATH
-        value: /tmp/chroma_db               # /tmp is writable on free tier
+        value: /tmp/chroma_db
       - key: RETRIEVAL_TOP_K
         value: "4"
       - key: QA_MAX_TOKENS
         value: "1024"
       - key: QA_TEMPERATURE
         value: "0.2"
-      - key: PYTHON_VERSION
-        value: "3.11.0"
 
   # ── Streamlit Frontend ───────────────────────────────────────────────────
   - type: web
     name: rag-frontend
-    runtime: python
-    region: oregon
+    runtime: docker
+    dockerfilePath: ./Dockerfile.frontend
+    region: frankfurt
     plan: free
-    rootDir: .
-    buildCommand: pip install -r requirements.txt
-    startCommand: streamlit run frontend/streamlit_app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
     envVars:
       - key: API_BASE_URL
-        sync: false                          # paste your rag-api URL here after deploy
-      - key: PYTHON_VERSION
-        value: "3.11.0"
+        sync: false
